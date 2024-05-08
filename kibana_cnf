@@ -1,0 +1,34 @@
+# =================== System: Logging ===================
+# Set the value of this setting to off to suppress all logging output, or to debug to log everyt>
+#logging.root.level: debug
+
+# Enables you to specify a file where Kibana stores log output.
+logging:
+  appenders:
+    file:
+      type: file
+      fileName: /var/log/kibana/kibana.log
+      layout:
+        type: json
+  root:
+    appenders:
+      - default
+      - file
+#  layout:
+#    type: json
+
+# Logs queries sent to Elasticsearch.
+#logging.loggers:
+#  - name: elasticsearch.query
+#    level: debug
+
+# =================== System: Other ===================
+# The path where Kibana stores persistent data not saved in Elasticsearch. Defaults to data
+#path.data: data
+
+# Specifies the path where Kibana creates the process ID file.
+pid.file: /run/kibana/kibana.pid
+
+
+
+
